@@ -11,23 +11,27 @@ let numberOfSecond = 0;
 let numberOfTheared = 0;
 let numberOfFourth = 0;
 const countOfFirst = localStorage.getItem("first");
-firstSpan.innerText = countOfFirst;
-if (countOfFirst)
+if (countOfFirst){
     numberOfFirst = countOfFirst;
+    firstSpan.innerText = countOfFirst;}
+else 
+numberOfFirst=0;
 const countOfSecond = localStorage.getItem("second");
-secondSpan.innerText = countOfSecond;
-if (countOfSecond)
+if (countOfSecond){
     numberOfSecond = countOfSecond;
+    secondSpan.innerText = countOfSecond;}
+    else numberOfSecond=0;
 const countOfTheared = localStorage.getItem("theared");
-theardSpan.innerText = countOfTheared;
-if (countOfTheared)
+if (countOfTheared){
     numberOfTheared = countOfTheared
+    theardSpan.innerText = countOfTheared;}
+    else numberOfTheared=0;
 const countOfFourth = localStorage.getItem("fourth");
-fourthSpan.innerText = countOfFourth;
-if (countOfFourth)
+if (countOfFourth){
     numberOfFourth = countOfFourth
+    fourthSpan.innerText = countOfFourth;}
+    else numberOfFourth=0;
 first.onclick = () => {
-
     numberOfFirst++;
     firstSpan.innerText = numberOfFirst;
     localStorage.setItem("first", numberOfFirst);
